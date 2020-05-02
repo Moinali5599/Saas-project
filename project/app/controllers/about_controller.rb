@@ -1,6 +1,6 @@
-class MenuController < ApplicationController
+class AboutController < ApplicationController
   #skip_before_action :ensure_user_logged_in
   def index
-    render "menupage"
+    render "about"
   end
 end

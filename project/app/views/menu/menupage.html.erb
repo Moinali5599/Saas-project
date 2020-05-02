@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Menu</title>
+	<link rel="stylesheet" type="text/css" href="menuhome-style.css">
+</head>
+<body>
+<section class="Navbar">
+<div class="logo">
+<%= link_to(image_tag("logo.png", width: "60px"), "/") %>
+</div>
+		<h1>Beans n Cream</h1>
+		<ul>
+		    <li>
+			  <a href="/">Home</a>
+			  <a href="/menu">Order</a>
+			  <a href="/about">About us</a>
+			</li>
+		</ul>
+		<button><a href="signup.html">Sign in</a></button>
+		<button><a href="signup.html">Sign up</a></button>
+</section>
+<div class="bg">
+<%= image_tag("menuhomebg.png") %>
+</div>
+<section class="menus">
+<h1>Menus</h1>
+<div class="menu-section">
+	<a href="#">Beverage</a>
+	<p>Contains coffee,Tea,Lemonades and many</p>
+</div>
+<div class="menu-section">
+	<a href="#">Food</a>
+	<p>Contains cookies,pastry,cheesecakes and many</p>
+</div>
+</section>
+<footer>
+<div class="Store">
+	<h3>Our stores</h3>
+	<p>Chennai</p>
+	<p>Guntur</p>
+	<p>Vijayawada</p>
+	<p>Nellore</p>
+	<h5>&copy;Copyright-2020</h5>
+</div>
+</footer>
+</body>
+</html>
