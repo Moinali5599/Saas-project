@@ -24,14 +24,18 @@
 </div>
 <section class="menus">
 <h1>Menus</h1>
+<section class="addmenu">
+<h3>Add Menu</h3>
+<input class="menu-title" type="text" placeholder="Menu Name">
+<input class="menu-description" type="text" placeholder="Menu Description">
+<input class="addmenu-button" type="Button" value="Add">
+</section>
+<% Menu.all.each do |menu| %>
 <div class="menu-section">
-	<a href="#">Beverage</a>
-	<p>Contains coffee,Tea,Lemonades and many</p>
+	<a href="#"><%= menu.name %></a>
+	<p>description</p>
 </div>
-<div class="menu-section">
-	<a href="#">Food</a>
-	<p>Contains cookies,pastry,cheesecakes and many</p>
-</div>
+<% end %>
 </section>
 <footer>
 <div class="Store">
