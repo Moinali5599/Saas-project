@@ -42,42 +42,37 @@
 	text-decoration: none;
 	color: white;
 }
-.cup img{
-	width: 640px;
-	height: 640px;
+.bg img{
+	margin-top: 20px;
+	margin-right: 10px;
 	float: right;
-	transform: rotate(90deg);
 }
-.welcome{
-    margin-top: 100px;
-	padding: 10px;
+.menus{
 	margin-left: 120px;
-	min-height: calc(100vh - 80px - 150px)
+	margin-top: 50px;
+min-height: calc(100vh - 80px - 150px)
 }
-.welcome h1{
-	font-size: 48px;
-	margin-bottom: 30px;
+.menus .menu-section{
+	padding: 15px;
+	margin-left: 30px;
+	max-width: 50%;
 }
-.welcome h3{
-	font-size: 32px;
-	margin-bottom: 30px;
+.menus .menu-section:hover{
+	background-color: #ededed;
+	transition:0.4s;
 }
-.welcome button{
-	margin-top: 10px;
-	padding: 5px;
-	border-radius: 4px;
-	border-color: red;
-	background-color: red;
-	border-style: none;
-	width: 80px;
-	height: 60px;
+.menus h1{
+	font-size: 36px;
 }
-.welcome button a{
+.menus .menu-section a{
+	font-size: 30px;
+	color: red;
 	text-decoration: none;
-	color: white;
+	font-weight: 700;
 }
-button:hover{
-	cursor: pointer;
+.menus .menu-section p{
+	font-size: 24px;
+	font-weight: 400;
 }
 footer{
 	display: block;
