@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Menu</title>
+	<link rel="stylesheet" type="text/css" href="menuhome-style.css">
+</head>
+<body>
+<section class="Navbar">
+<div class="logo">
+<%= link_to(image_tag("logo.png", width: "60px"), "/") %>
+</div>
+		<h1>Beans n Cream</h1>
+		<ul>
+		    <li>
+			  <a href="/">Home</a>
+			  <a href="/menu">Order</a>
+			  <a href="/about">About us</a>
+			</li>
+		</ul>
+		<button><a href="signup.html">Sign in</a></button>
+		<button><a href="signup.html">Sign up</a></button>
+</section>
+<%= form_with(url "/menu/#{menu.id}"), method="put" do %>
+ <input type="text" placeholder="Name">
+ <input type="text" placeholder="Description" name="menu_name">
+ <input type="submit" value="Update" name="menu_desc">
+<% end %>
+<footer>
+<div class="Store">
+	<h3>Our stores</h3>
+	<p>Chennai</p>
+	<p>Guntur</p>
+	<p>Vijayawada</p>
+	<p>Nellore</p>
+	<h5>&copy;Copyright-2020</h5>
+</div>
+</footer>

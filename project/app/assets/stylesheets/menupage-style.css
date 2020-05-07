@@ -74,6 +74,14 @@ min-height: calc(100vh - 80px - 150px)
 	font-size: 24px;
 	font-weight: 400;
 }
+.menu-section .EditButton a{
+	border: 1px solid black;
+	border-radius: 4px;
+	background-color: black;
+	color: white;
+	width: 60px;
+	height: 60px;
+}
 footer{
 	display: block;
 	width: 100%;
