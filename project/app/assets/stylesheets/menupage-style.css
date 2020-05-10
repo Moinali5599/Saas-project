@@ -44,7 +44,7 @@
 }
 .bg img{
 	margin-top: 20px;
-	margin-right: 10px;
+	margin-right: 40px;
 	float: right;
 }
 .menus{
@@ -73,6 +73,9 @@ min-height: calc(100vh - 80px - 150px)
 .menus .menu-section p{
 	font-size: 24px;
 	font-weight: 400;
+}
+.menu-section select{
+	margin-bottom: 10px;
 }
 .menu-section .EditButton a{
 	border: 1px solid black;

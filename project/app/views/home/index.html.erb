@@ -16,8 +16,12 @@
 			  <a href="/about">About us</a>
 			</li>
 		</ul>
-		<button><a href="signup.html">Sign in</a></button>
-		<button><a href="/signup">Sign up</a></button>
+		<% if current_user %>
+		<button><a href="/signin">Log in</a></button>
+		<% else %>
+		<button><a href="/signin">Sign In</a></button>
+		<button><a href="/signup">Sign Up</a></button>
+		<% end %>
 </section>
 <div class="cup">
  <%= image_tag("cup.png") %>

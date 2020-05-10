@@ -36,6 +36,12 @@
 <div class="menu-section">
 	<a href="#"><%= menu.menu_name %></a>
 	<p><%= menu.menu_desc %></p>
+	<%= form_with(url: "/menu/#{menu.id}", method: "post") do %>
+	<select class="Status" name="status">
+		<option>active</option>
+		<option>not active</option>
+	</select>
+	<% end %>
 	<%= form_with(url: "/menu/#{menu.id}", method: "delete") do %>
 	<input class="delete-button" type="submit" value="Delete">
 	<% end %>

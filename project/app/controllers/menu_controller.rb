@@ -14,9 +14,9 @@ class MenuController < ApplicationController
 
   def update
     id = params[:id]
+    status = params[:status]
     menu = Menu.find(id)
-    menu.menu_name = menu_name
-    menu.menu_desc = menu_desc
+    menu.status = status
     menu.save
     redirect_to menu_path
   end
