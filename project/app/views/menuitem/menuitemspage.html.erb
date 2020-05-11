@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>Menu</title>
+	<link rel="stylesheet" type="text/css" href="menuhome-style.css">
+</head>
+<body>
+<section class="Navbar">
+<div class="logo">
+<%= link_to(image_tag("logo.png", width: "60px"), "/") %>
+</div>
+		<h1>Beans n Cream</h1>
+		<ul>
+		    <li>
+			  <a href="/">Home</a>
+			  <a href="/menu">Order</a>
+			  <a href="/about">About us</a>
+			</li>
+		</ul>
+		<button><a href="signup.html">Sign in</a></button>
+		<button><a href="signup.html">Sign up</a></button>
+</section>
+<div class="bg">
+<%= image_tag("menuhomebg.png") %>
+</div>
+<section class="Menuitems">
+<h1>Menu Items</h1>
+<section class="addmenuitem">
+<h3>Add Menu Item</h3>
+<%= form_with(url: "/menuitem", method: "post") do %>
+<input class="menuitem-title" type="text" placeholder="Menuitem Name" name="name">
+<input class="menuitem-description" type="text" placeholder="Menuitem Description" name="description">
+<input class="menuitem-price" type="integer" placeholder="Menuitem Price" name="price">
+<select class="Caterogy" name="category">
+		<option>breakfast</option>
+    <option>lunch</option>
+    <option>dinner</option>
+		<option>dessert</option>
+		<option>beverage</option>
+		<option>snack</option>
+	</select>
+<input class="addmenu-button" type="submit" value="Add">
+<% end %>
+<%= render partial: "menuitems-section", locals: {
+             title: "Beverages",
+             menuitems: Menuitem.beverage,
+           } %>
+<%= render partial: "menuitems-section", locals: {
+             title: "Breakfast",
+             menuitems: Menuitem.breakfast,
+           } %>
+<footer>
+<div class="Store">
+	<h3>Our stores</h3>
+	<p>Chennai</p>
+	<p>Guntur</p>
+	<p>Vijayawada</p>
+	<p>Nellore</p>
+	<h5>&copy;Copyright-2020</h5>
+</div>
+</footer>
+</body>
+</html>

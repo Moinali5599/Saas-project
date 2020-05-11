@@ -1,0 +1,16 @@
+<section class="Category">
+<h2><%= title %></h2>
+</section>
+<section class="Menuitems">
+<% menuitems.all.each do |menuitem| %>
+<div class="menuitem-section">
+  <h3><%= menuitem.name %>
+  <p><%= menuitem.description %></p>
+  <p><%= menuitem.price %></p>
+  <button class="AddToCartButton">Add to cart</button>
+	<%= form_with(url: "/menuitem/#{menuitem.id}", method: "delete") do %>
+	<input class="delete-button" type="submit" value="Delete">
+	<% end %>
+</div>
+<% end %>
+</section>

@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   get "/menu" => "menu#menupage"
   get "/editmenu" => "menu#edit"
   post "/menu" => "menu#create"
+  get "/menuitem" => "menuitem#index"
   get "/signup" => "user#index"
   post "/signup" => "user#create"
   resources :menu
+  resources :menuitem
   resources :user
   resources :sessions, only: [:new, :create, :destroy]
   get "/signin" => "session#new"
